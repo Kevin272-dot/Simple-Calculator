@@ -160,3 +160,20 @@ for (let button of buttons) {
     takin(value);
   });
 }
+
+document.addEventListener("keydown", (event) => {
+  const key = event.key;
+  if ((key >= "0" && key <= "9") || ["+", "-", ".", "/"].includes(key)) {
+    takin(key);
+  } else if (key == "(" || key == ")") {
+    takin("()");
+  } else if (key == "*") {
+    takin("x");
+  } else if (key == "Enter" || key == "=") {
+    takin("x");
+  } else if (key == "Backspace" || key == "Delete") {
+    takin("⌫");
+  } else if (key.toLowerCase() == "c" || key == "Escape") {
+    takin("C");
+  }
+});
