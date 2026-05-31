@@ -1,0 +1,147 @@
+body {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  background: linear-gradient(45deg, #7f00ff, #0712ad);
+  height: 100vh;
+  font-family: "Times New Roman", Times, serif;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+#header {
+  font-weight: 900;
+  font-size: 24px;
+  color: white;
+}
+
+#main {
+  display: flex;
+  flex-direction: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+#cal {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid white;
+  height: auto;
+  width: 500px;
+  gap: 0px;
+  background-color: #000000;
+  border: 1px solid #2c2c2e;
+  border-radius: 12px;
+}
+
+#display {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 166.67px;
+  border-bottom: 1px solid #1c1c1e;
+  color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#op {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  height: 333.33px;
+  gap: 0px;
+  padding: 0px;
+  justify-content: space-around;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  box-sizing: border-box;
+  justify-content: space-around;
+  align-items: center;
+}
+
+button {
+  font-size: 16px;
+  height: 60px;
+  width: 100px;
+  border-radius: 100%;
+  background-color: #1c1c1e;
+  color: #ffffff;
+  border: none;
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease,
+    box-shadow 0.2s ease;
+}
+
+#clear,
+#brackets,
+#backspace,
+button[id="**"] {
+  background-color: #a5a5a5;
+  color: #000000;
+}
+
+#\+,
+#\-,
+#x,
+#\/,
+#\= {
+  background-color: #9d4edd;
+  color: white;
+}
+
+button:hover {
+  background-color: #2c2c2e;
+  transform: translateY(
+    -2px
+  ); /* Makes button feel active by lifting it slightly */
+}
+
+button:active {
+  transform: translateY(1px) scale(0.95); /* Tactile press-down feel */
+}
+
+#clear:hover,
+#brackets:hover,
+#backspace:hover,
+button[id="**"]:hover {
+  background-color: #d1d1d6;
+  color: #000000;
+}
+
+#\+:hover,
+#\-:hover,
+#x:hover,
+#\/:hover,
+#\=:hover {
+  background-color: #b565f8; /* Brighter purple on hover */
+  box-shadow: 0 0 15px rgba(157, 78, 221, 0.5); /* Soft neon glow */
+}
+
+#val {
+  font-size: 24px;
+  font-weight: 600;
+  color: #a5a5a5;
+  margin: 0px;
+  word-break: break-all;
+}
+#output {
+  font-size: 36px;
+  color: #ffffff;
+  margin: 0px;
+}
